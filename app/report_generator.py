@@ -10,6 +10,27 @@ from fpdf import FPDF
 
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
 
+# Unicode characters that Helvetica can't render → safe ASCII replacements
+_UNICODE_REPLACEMENTS = {
+    "\u2014": "--",   # em dash —
+    "\u2013": "-",    # en dash –
+    "\u2018": "'",    # left single quote '
+    "\u2019": "'",    # right single quote '
+    "\u201c": '"',    # left double quote "
+    "\u201d": '"',    # right double quote "
+    "\u2026": "...",  # ellipsis …
+    "\u2022": "*",    # bullet •
+    "\u00a0": " ",    # non-breaking space
+}
+
+
+def _sanitize(text: str) -> str:
+    """Replace Unicode characters unsupported by Helvetica with ASCII equivalents."""
+    for char, replacement in _UNICODE_REPLACEMENTS.items():
+        text = text.replace(char, replacement)
+    # Catch any remaining non-latin1 characters
+    return text.encode("latin-1", errors="replace").decode("latin-1")
+
 
 class ComplianceReport(FPDF):
     """Custom PDF layout for compliance reports."""
@@ -44,7 +65,7 @@ def generate_report(analysis: dict[str, Any]) -> str:
     # Framework and date
     pdf.set_font("Helvetica", "", 10)
     fw_name = analysis.get("framework_name", fw.upper())
-    pdf.cell(0, 8, f"Framework: {fw_name}", ln=True)
+    pdf.cell(0, 8, _sanitize(f"Framework: {fw_name}"), ln=True)
     pdf.cell(0, 8, f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}", ln=True)
     pdf.ln(4)
 
@@ -52,7 +73,7 @@ def generate_report(analysis: dict[str, Any]) -> str:
     pdf.set_font("Helvetica", "B", 12)
     pdf.cell(0, 10, "Summary", ln=True)
     pdf.set_font("Helvetica", "", 10)
-    pdf.multi_cell(0, 6, analysis.get("summary", "N/A"))
+    pdf.multi_cell(0, 6, _sanitize(analysis.get("summary", "N/A")))
     pdf.ln(4)
 
     # Risk score
@@ -89,12 +110,12 @@ def generate_report(analysis: dict[str, Any]) -> str:
 
     pdf.set_font("Helvetica", "", 8)
     for r in analysis.get("compliance_results", []):
-        pdf.cell(col_widths[0], 6, r.get("control_id", ""), border=1)
-        pdf.cell(col_widths[1], 6, r.get("control_title", "")[:24], border=1)
-        pdf.cell(col_widths[2], 6, r.get("status", ""), border=1)
+        pdf.cell(col_widths[0], 6, _sanitize(r.get("control_id", "")), border=1)
+        pdf.cell(col_widths[1], 6, _sanitize(r.get("control_title", "")[:24]), border=1)
+        pdf.cell(col_widths[2], 6, _sanitize(r.get("status", "")), border=1)
         expl = r.get("explanation", "")
         expl = expl[:68] + "..." if len(expl) > 68 else expl
-        pdf.cell(col_widths[3], 6, expl, border=1)
+        pdf.cell(col_widths[3], 6, _sanitize(expl), border=1)
         pdf.ln()
 
     pdf.ln(6)
@@ -104,7 +125,7 @@ def generate_report(analysis: dict[str, Any]) -> str:
     pdf.cell(0, 10, "Top Recommendations", ln=True)
     pdf.set_font("Helvetica", "", 10)
     for i, rec in enumerate(analysis.get("recommendations", []), 1):
-        pdf.multi_cell(0, 6, f"{i}. {rec}")
+        pdf.multi_cell(0, 6, _sanitize(f"{i}. {rec}"))
         pdf.ln(2)
 
     # Metadata

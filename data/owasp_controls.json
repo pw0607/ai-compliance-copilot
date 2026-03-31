@@ -1,0 +1,52 @@
+[
+  {
+    "id": "OWASP-LLM-01",
+    "title": "Prompt Injection",
+    "description": "The system implements defenses against direct and indirect prompt injection attacks that manipulate LLM behavior."
+  },
+  {
+    "id": "OWASP-LLM-02",
+    "title": "Insecure Output Handling",
+    "description": "LLM outputs are validated and sanitized before being rendered, executed, or passed to downstream systems."
+  },
+  {
+    "id": "OWASP-LLM-03",
+    "title": "Training Data Poisoning",
+    "description": "Training data integrity is verified and protected against manipulation that could introduce backdoors or biases."
+  },
+  {
+    "id": "OWASP-LLM-04",
+    "title": "Model Denial of Service",
+    "description": "The system implements rate limiting, input size restrictions, and resource management to prevent DoS attacks on the LLM."
+  },
+  {
+    "id": "OWASP-LLM-05",
+    "title": "Supply Chain Vulnerabilities",
+    "description": "Third-party models, plugins, and dependencies are vetted for security and integrity before integration."
+  },
+  {
+    "id": "OWASP-LLM-06",
+    "title": "Sensitive Information Disclosure",
+    "description": "The system prevents the LLM from leaking sensitive data, PII, or proprietary information in its responses."
+  },
+  {
+    "id": "OWASP-LLM-07",
+    "title": "Insecure Plugin Design",
+    "description": "Plugins and tool integrations enforce least-privilege access and validate all inputs before execution."
+  },
+  {
+    "id": "OWASP-LLM-08",
+    "title": "Excessive Agency",
+    "description": "The system limits the LLM's ability to take autonomous actions, requiring human approval for high-impact operations."
+  },
+  {
+    "id": "OWASP-LLM-09",
+    "title": "Overreliance",
+    "description": "The system includes safeguards against users blindly trusting LLM outputs, with confidence indicators and verification prompts."
+  },
+  {
+    "id": "OWASP-LLM-10",
+    "title": "Model Theft",
+    "description": "The system protects model weights, APIs, and inference endpoints against unauthorized access and extraction."
+  }
+]

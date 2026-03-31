@@ -1,0 +1,52 @@
+[
+  {
+    "id": "HIPAA-01",
+    "title": "Access Controls",
+    "description": "Technical policies and procedures to allow access only to authorized persons to electronic protected health information (ePHI)."
+  },
+  {
+    "id": "HIPAA-02",
+    "title": "Audit Controls",
+    "description": "Hardware, software, and procedural mechanisms to record and examine activity in systems that contain or use ePHI."
+  },
+  {
+    "id": "HIPAA-03",
+    "title": "Integrity Controls",
+    "description": "Policies and procedures to protect ePHI from improper alteration or destruction, including electronic mechanisms to corroborate data integrity."
+  },
+  {
+    "id": "HIPAA-04",
+    "title": "Transmission Security",
+    "description": "Technical security measures to guard against unauthorized access to ePHI transmitted over electronic communications networks."
+  },
+  {
+    "id": "HIPAA-05",
+    "title": "Encryption at Rest",
+    "description": "Mechanisms to encrypt ePHI stored in databases, file systems, and backups to prevent unauthorized disclosure."
+  },
+  {
+    "id": "HIPAA-06",
+    "title": "Minimum Necessary Standard",
+    "description": "Policies ensuring that only the minimum necessary amount of PHI is used, disclosed, or requested for a given purpose."
+  },
+  {
+    "id": "HIPAA-07",
+    "title": "Business Associate Agreements",
+    "description": "Written contracts with third-party vendors ensuring they safeguard PHI and comply with HIPAA requirements."
+  },
+  {
+    "id": "HIPAA-08",
+    "title": "Breach Notification",
+    "description": "Procedures to detect, report, and notify affected individuals and HHS of breaches of unsecured PHI within required timeframes."
+  },
+  {
+    "id": "HIPAA-09",
+    "title": "Risk Analysis and Management",
+    "description": "Conduct accurate and thorough assessments of potential risks and vulnerabilities to the confidentiality, integrity, and availability of ePHI."
+  },
+  {
+    "id": "HIPAA-10",
+    "title": "Workforce Training",
+    "description": "Training programs for all workforce members on policies and procedures regarding PHI handling, security awareness, and incident reporting."
+  }
+]

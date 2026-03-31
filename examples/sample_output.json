@@ -1,0 +1,57 @@
+{
+  "framework": "hipaa",
+  "framework_name": "HIPAA",
+  "risk_score": 0.1,
+  "summary": "Low risk — strong compliance posture with minor gaps.",
+  "compliance_results": [
+    {
+      "control_id": "HIPAA-01",
+      "control_title": "Access Controls",
+      "status": "Yes",
+      "risk_score": 0,
+      "explanation": "The system description provides sufficient evidence of compliance with 'Access Controls'. Matched signals: role-based, least privilege, authentication, authorization.",
+      "evidence_found": ["role-based", "least privilege", "authentication", "authorization"],
+      "gaps": [],
+      "recommendation": "Continue maintaining current practices and ensure formal documentation."
+    },
+    {
+      "control_id": "HIPAA-02",
+      "control_title": "Audit Controls",
+      "status": "Yes",
+      "risk_score": 0,
+      "explanation": "The system description provides sufficient evidence of compliance with 'Audit Controls'. Matched signals: audit, logging, log, record.",
+      "evidence_found": ["audit", "logging", "log", "record"],
+      "gaps": [],
+      "recommendation": "Continue maintaining current practices and ensure formal documentation."
+    },
+    {
+      "control_id": "HIPAA-03",
+      "control_title": "Integrity Controls",
+      "status": "Partial",
+      "risk_score": 0.5,
+      "explanation": "Some evidence found for 'Integrity Controls' (matched: tamper), but coverage appears incomplete.",
+      "evidence_found": ["tamper"],
+      "gaps": ["No evidence of: integrity", "No evidence of: checksum"],
+      "recommendation": "Strengthen compliance by addressing all aspects of 'Integrity Controls'."
+    }
+  ],
+  "risk_summary": {
+    "risk_score": 0.1,
+    "interpretation": "Low risk — strong compliance posture with minor gaps.",
+    "total_controls": 10,
+    "compliant": 8,
+    "partial": 2,
+    "non_compliant": 0,
+    "high_risk_controls": [
+      {"control_id": "HIPAA-03", "title": "Integrity Controls", "status": "Partial"}
+    ],
+    "top_recommendations": [
+      "Strengthen compliance by addressing all aspects of 'Integrity Controls'."
+    ]
+  },
+  "recommendations": [
+    "Strengthen compliance by addressing all aspects of 'Integrity Controls'."
+  ],
+  "prompt_injection_detected": false,
+  "human_review_recommended": false
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "CSF-ID-01",
+    "title": "Asset Management",
+    "description": "Physical devices, software, and data flows are inventoried and managed consistent with their relative importance to organizational objectives."
+  },
+  {
+    "id": "CSF-ID-02",
+    "title": "Risk Assessment",
+    "description": "The organization understands cybersecurity risks to operations, assets, and individuals through formal risk assessment processes."
+  },
+  {
+    "id": "CSF-PR-01",
+    "title": "Access Control",
+    "description": "Access to assets and associated facilities is limited to authorized users, processes, and devices, managed consistent with risk."
+  },
+  {
+    "id": "CSF-PR-02",
+    "title": "Data Security",
+    "description": "Data at rest and in transit is protected through encryption, integrity checking, and secure storage mechanisms."
+  },
+  {
+    "id": "CSF-PR-03",
+    "title": "Protective Technology",
+    "description": "Technical security solutions are managed to ensure the security and resilience of systems, consistent with policies."
+  },
+  {
+    "id": "CSF-DE-01",
+    "title": "Anomaly Detection",
+    "description": "Anomalous activity is detected in a timely manner through continuous monitoring and alerting mechanisms."
+  },
+  {
+    "id": "CSF-DE-02",
+    "title": "Security Monitoring",
+    "description": "Information systems and assets are monitored to identify cybersecurity events and verify effectiveness of protective measures."
+  },
+  {
+    "id": "CSF-RS-01",
+    "title": "Incident Response Planning",
+    "description": "Response processes and procedures are executed and maintained to ensure response to detected cybersecurity incidents."
+  },
+  {
+    "id": "CSF-RS-02",
+    "title": "Communications",
+    "description": "Response activities are coordinated with internal and external stakeholders including law enforcement and affected parties."
+  },
+  {
+    "id": "CSF-RC-01",
+    "title": "Recovery Planning",
+    "description": "Recovery processes and procedures are executed and maintained to ensure restoration of systems affected by cybersecurity incidents."
+  }
+]

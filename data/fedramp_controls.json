@@ -1,0 +1,52 @@
+[
+  {
+    "id": "FEDRAMP-AC-01",
+    "title": "Access Control Policy",
+    "description": "The organization develops, documents, and disseminates an access control policy and reviews it at defined intervals."
+  },
+  {
+    "id": "FEDRAMP-AC-02",
+    "title": "Multi-Factor Authentication",
+    "description": "The system enforces multi-factor authentication for all privileged and remote access sessions."
+  },
+  {
+    "id": "FEDRAMP-AU-01",
+    "title": "Audit Logging",
+    "description": "The system generates audit records for defined events including access, modifications, and security-relevant actions."
+  },
+  {
+    "id": "FEDRAMP-AU-02",
+    "title": "Audit Log Retention",
+    "description": "Audit logs are retained for a minimum defined period and protected against unauthorized modification or deletion."
+  },
+  {
+    "id": "FEDRAMP-SC-01",
+    "title": "Boundary Protection",
+    "description": "The system monitors and controls communications at external and key internal boundaries using managed interfaces."
+  },
+  {
+    "id": "FEDRAMP-SC-02",
+    "title": "Transmission Confidentiality",
+    "description": "The system protects the confidentiality of transmitted information using cryptographic mechanisms."
+  },
+  {
+    "id": "FEDRAMP-CM-01",
+    "title": "Configuration Management",
+    "description": "The organization establishes and maintains baseline configurations and inventories of information systems."
+  },
+  {
+    "id": "FEDRAMP-RA-01",
+    "title": "Vulnerability Scanning",
+    "description": "The organization scans for vulnerabilities at defined frequencies and remediates findings within defined timelines."
+  },
+  {
+    "id": "FEDRAMP-IA-01",
+    "title": "Identification and Authentication",
+    "description": "The system uniquely identifies and authenticates organizational users and processes acting on behalf of users."
+  },
+  {
+    "id": "FEDRAMP-CA-01",
+    "title": "Continuous Monitoring",
+    "description": "The organization implements a continuous monitoring strategy including ongoing assessment of security controls."
+  }
+]

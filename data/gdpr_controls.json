@@ -1,0 +1,52 @@
+[
+  {
+    "id": "GDPR-01",
+    "title": "Lawful Basis for Processing",
+    "description": "Personal data is processed only with a valid lawful basis such as consent, contract, legal obligation, or legitimate interest."
+  },
+  {
+    "id": "GDPR-02",
+    "title": "Data Minimization",
+    "description": "Only personal data that is adequate, relevant, and limited to what is necessary for the stated purpose is collected and processed."
+  },
+  {
+    "id": "GDPR-03",
+    "title": "Purpose Limitation",
+    "description": "Personal data is collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes."
+  },
+  {
+    "id": "GDPR-04",
+    "title": "Data Subject Rights",
+    "description": "Mechanisms exist for data subjects to exercise their rights including access, rectification, erasure, and data portability."
+  },
+  {
+    "id": "GDPR-05",
+    "title": "Privacy by Design",
+    "description": "Data protection is integrated into the design of processing activities and business practices from the outset."
+  },
+  {
+    "id": "GDPR-06",
+    "title": "Data Protection Impact Assessment",
+    "description": "A DPIA is conducted for processing operations likely to result in high risk to the rights and freedoms of individuals."
+  },
+  {
+    "id": "GDPR-07",
+    "title": "Data Processing Agreements",
+    "description": "Written agreements with data processors define the scope, nature, and purpose of processing and ensure GDPR compliance."
+  },
+  {
+    "id": "GDPR-08",
+    "title": "Breach Notification",
+    "description": "Personal data breaches are reported to the supervisory authority within 72 hours and to affected individuals without undue delay."
+  },
+  {
+    "id": "GDPR-09",
+    "title": "Cross-Border Data Transfers",
+    "description": "Transfers of personal data outside the EEA are protected by appropriate safeguards such as SCCs or adequacy decisions."
+  },
+  {
+    "id": "GDPR-10",
+    "title": "Automated Decision-Making Safeguards",
+    "description": "Individuals are informed about and can contest decisions made solely by automated processing that significantly affect them."
+  }
+]

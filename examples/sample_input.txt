@@ -1,0 +1,24 @@
+A clinical decision support AI system deployed in a hospital network that analyzes
+patient lab results, radiology images (DICOM), and electronic health records to
+recommend treatment plans for oncology patients.
+
+The system processes Protected Health Information (PHI) including patient names,
+medical record numbers, and diagnostic data. All data is encrypted at rest using
+AES-256 and in transit via TLS 1.3. Role-based access controls enforce least-privilege
+access for clinicians, with multi-factor authentication required for all users.
+
+The system maintains audit logs of all data access events, stored in a tamper-proof
+centralized logging system with 7-year retention. A signed Business Associate Agreement
+is in place with the cloud infrastructure provider.
+
+The AI model was validated on a diverse dataset representing multiple demographic groups.
+Bias testing was conducted across age, gender, and ethnicity dimensions. Explainability
+is provided through SHAP values displayed alongside each recommendation.
+
+A formal risk assessment was conducted covering data governance, model accuracy, and
+adversarial robustness. Post-deployment monitoring tracks model drift and prediction
+accuracy weekly. An incident response playbook defines escalation procedures for
+model failures or data breaches.
+
+Workforce training on PHI handling and AI system usage is conducted quarterly.
+Breach notification procedures comply with the 72-hour reporting requirement.

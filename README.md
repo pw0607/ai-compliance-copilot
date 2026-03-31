@@ -198,6 +198,7 @@ ai-compliance-copilot/
 │   ├── compliance_engine.py     # Evaluation orchestrator
 │   ├── llm_client.py            # Mock + OpenAI LLM integration
 │   ├── risk_scoring.py          # Risk computation and summary
+│   ├── report_generator.py     # PDF generation with Unicode sanitization
 │   ├── utils.py                 # Shared utilities and registries
 │   └── prompts/
 │       ├── base.py              # Base evaluation prompt (strict rules)
@@ -227,6 +228,7 @@ ai-compliance-copilot/
 ├── CONTRIBUTING.md
 ├── SECURITY.md
 ├── LICENSE
+├── test_cases.md               # Sample inputs for testing
 └── README.md
 ```
 

@@ -2,51 +2,61 @@
   {
     "id": "HIPAA-01",
     "title": "Access Controls",
+    "severity": "critical",
     "description": "Technical policies and procedures to allow access only to authorized persons to electronic protected health information (ePHI)."
   },
   {
     "id": "HIPAA-02",
     "title": "Audit Controls",
+    "severity": "high",
     "description": "Hardware, software, and procedural mechanisms to record and examine activity in systems that contain or use ePHI."
   },
   {
     "id": "HIPAA-03",
     "title": "Integrity Controls",
+    "severity": "high",
     "description": "Policies and procedures to protect ePHI from improper alteration or destruction, including electronic mechanisms to corroborate data integrity."
   },
   {
     "id": "HIPAA-04",
     "title": "Transmission Security",
+    "severity": "critical",
     "description": "Technical security measures to guard against unauthorized access to ePHI transmitted over electronic communications networks."
   },
   {
     "id": "HIPAA-05",
     "title": "Encryption at Rest",
+    "severity": "critical",
     "description": "Mechanisms to encrypt ePHI stored in databases, file systems, and backups to prevent unauthorized disclosure."
   },
   {
     "id": "HIPAA-06",
     "title": "Minimum Necessary Standard",
+    "severity": "medium",
     "description": "Policies ensuring that only the minimum necessary amount of PHI is used, disclosed, or requested for a given purpose."
   },
   {
     "id": "HIPAA-07",
     "title": "Business Associate Agreements",
+    "severity": "high",
     "description": "Written contracts with third-party vendors ensuring they safeguard PHI and comply with HIPAA requirements."
   },
   {
     "id": "HIPAA-08",
     "title": "Breach Notification",
+    "severity": "critical",
     "description": "Procedures to detect, report, and notify affected individuals and HHS of breaches of unsecured PHI within required timeframes."
   },
   {
     "id": "HIPAA-09",
     "title": "Risk Analysis and Management",
+    "severity": "high",
     "description": "Conduct accurate and thorough assessments of potential risks and vulnerabilities to the confidentiality, integrity, and availability of ePHI."
   },
   {
     "id": "HIPAA-10",
     "title": "Workforce Training",
+    "severity": "medium",
     "description": "Training programs for all workforce members on policies and procedures regarding PHI handling, security awareness, and incident reporting."
   }
 ]

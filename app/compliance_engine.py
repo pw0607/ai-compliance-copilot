@@ -10,6 +10,7 @@ from typing import Any
 
 from app.llm_client import call_llm
 from app.prompts.prompt_builder import build_prompt
+from app.remediation import generate_remediation_plan
 from app.risk_scoring import compute_risk_score, generate_risk_summary
 from app.utils import (
     FRAMEWORK_FILES,
@@ -40,10 +41,12 @@ def load_controls(framework: str) -> list[dict[str, str]]:
 def evaluate_control(system_description: str, framework: str, control: dict[str, str]) -> dict[str, Any]:
     """
     Evaluate a single control by building a prompt and calling the LLM client.
+    Passes severity from the control definition through to the result.
     """
     control_id = control["id"]
     control_title = control["title"]
     control_description = control["description"]
+    severity = control.get("severity", "medium")
 
     prompt = build_prompt(
         system_description=system_description,
@@ -60,6 +63,8 @@ def evaluate_control(system_description: str, framework: str, control: dict[str,
         system_description=system_description,
     )
 
+    # Attach severity from the control definition
+    result["severity"] = severity
     return result
 
 
@@ -83,6 +88,7 @@ def analyze(system_description: str, framework: str) -> dict[str, Any]:
     # Compute risk metrics
     risk_score = compute_risk_score(results)
     risk_summary = generate_risk_summary(results, risk_score)
+    remediation_plan = generate_remediation_plan(results)
 
     return {
         "framework": framework,
@@ -92,6 +98,7 @@ def analyze(system_description: str, framework: str) -> dict[str, Any]:
         "compliance_results": results,
         "risk_summary": risk_summary,
         "recommendations": risk_summary["top_recommendations"],
+        "remediation_plan": remediation_plan,
         "prompt_injection_detected": injection_flag,
         "human_review_recommended": injection_flag or risk_score > 0.7,
     }

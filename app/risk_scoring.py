@@ -33,11 +33,11 @@ def generate_risk_summary(results: list[dict[str, Any]], risk_score: float) -> d
     non_compliant = sum(1 for r in results if r.get("status") == "No")
 
     if risk_score <= 0.3:
-        interpretation = "Low risk — strong compliance posture with minor gaps."
+        interpretation = "Low risk -- strong compliance posture with minor gaps."
     elif risk_score <= 0.6:
-        interpretation = "Medium risk — partial compliance detected, several controls need attention."
+        interpretation = "Medium risk -- partial compliance detected, several controls need attention."
     else:
-        interpretation = "High risk — significant compliance gaps, immediate remediation recommended."
+        interpretation = "High risk -- significant compliance gaps, immediate remediation recommended."
 
     return {
         "risk_score": risk_score,

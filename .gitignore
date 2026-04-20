@@ -26,6 +26,9 @@ env/
 # Reports (generated)
 reports/*.pdf
 
+# History (generated)
+history/analysis_history.json
+
 # OS
 .DS_Store
 Thumbs.db
